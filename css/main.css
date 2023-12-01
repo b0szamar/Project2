@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 5px;
+  }
+  .grid {
+    border: 1px solid #000;
+    min-height: 90%;
+    width: 50%;
+    margin-left: 450px;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    display: grid;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .grid > div {
+    display: grid; 
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid black;
+  }
+  .grid > div >div {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+
+  } 
