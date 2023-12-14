@@ -1,34 +1,42 @@
-html, body {
-    height: 98%;
-    margin-top: 15px;
-    background-image: url("https://wallpaperswide.com/download/wooden_floor_texture-wallpaper-2560x1440.jpg");
-  }
-  .grid {
-    border: 1px solid #000;
-    min-height: 90%;
-    width: 31%;
-    margin-left: 33%;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
-    display: grid;
-    flex-wrap: wrap;
-    flex-direction: row;
-  }
-  .grid > div {
-    display: grid; 
-    justify-content: center;
-    flex-direction: column;
-    border: 1px solid white;
-    background-color: black;
-  }
-  .grid > div >div {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    color: white;
-    visibility: hidden;
-  } 
-  #hatter{
-    background-image:  url("https://png.pngtree.com/thumb_back/fh260/background/20211116/pngtree-wedding-card-backgound-design-image_915381.png");
-    background-size:cover;
-  }
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: rgb(243, 193, 117);
+  background-image: url("https://wallpaperswide.com/download/wooden_floor_texture-wallpaper-2560x1440.jpg");
+}
+
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(4, 120px);
+  grid-gap: 10px;
+}
+
+.card {
+  width: 120px;
+  height: 120px;
+  background-color: rgb(243, 193, 117) ;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+.emoji {
+  display: none;
+}
+.card.flipped .emoji {
+  display: block;
+}
+.card.matched {
+  pointer-events: none;
+  visibility:hidden;
+}
+#probak{
+  position: absolute;
+  top: 5%;
+}
